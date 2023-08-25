@@ -1,11 +1,12 @@
 package org.example.demo;
 
-public class Demo {
+public class Employee {
 
     private int id;
     private String firstName;
     private String lastName;
-    private Employee employee;
+    private double salary;
+
     public int getId() {
         return id;
     }
@@ -30,28 +31,28 @@ public class Demo {
         this.lastName = lastName;
     }
 
-    public Employee getEmployee(){
-        return employee;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setEmployee(Employee employee){
-        this.employee=employee;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
-    public Demo(int id, String firstName, String lastName,Employee employee) {
+    public Employee(int id, String firstName, String lastName, double salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.employee = employee;
+        this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Demo{" +
+        return "Employee{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", employee=" + employee +
+                ", salary=" + salary +
                 '}';
     }
 }
